@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:itemCount="20"
+        tools:listitem="@layout/item_dialogs"/>
+
+    <LinearLayout
+        android:id="@+id/ll_layout_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#E4E4E4"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <EditText
+            android:id="@+id/et_message"
+            android:inputType="textShortMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight=".5"
+            android:background="@drawable/round_button"
+            android:backgroundTint="@color/white"
+            android:hint="Type a message..."
+            android:padding="10dp"
+            android:singleLine="true"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_send"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:backgroundTint="#26A69A"
+            android:text="Send"
+            android:clickable="true"
+            android:textColor="@color/white"
+            tools:ignore="TouchTargetSizeCheck"
+            android:focusable="true" />
+
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
